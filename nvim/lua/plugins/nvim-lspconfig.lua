@@ -84,6 +84,12 @@ local config = function()
 		filetypes = { "solidity" },
 	})
 
+  lspconfig.cssls.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+    filetypes = {"css", "scss", "less"}
+  })
+
 	-- typescriptreact, javascriptreact, css, sass, scss, less, svelte, vue
 	lspconfig.emmet_ls.setup({
 		capabilities = capabilities,
